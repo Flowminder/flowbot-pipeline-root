@@ -1,0 +1,26 @@
+version: 2.1
+jobs:
+  test-render:
+    docker:
+      - image: cimg/python:3.12.3
+    steps:
+      - checkout
+      - run:
+          name: Install deps
+          command: |
+            pipenv install
+      - run:
+          name: Render template
+          command: |
+            mkdir .circleci/generated
+            bash run.sh . -o .circleci/generated --replay-file .circleci/test-replay.json
+      - run:
+          name: Compare to example
+          command: |
+            diff -r .circleci/generated .circleci/approved
+
+
+workflows:
+  test-render:
+    jobs:
+      - test-render

@@ -1,0 +1,33 @@
+{
+  "cookiecutter": {
+    "_crisis_slug": "{{ cookiecutter.crisis_name|slugify }}",
+    "_country_slug": "{{ cookiecutter.country|slugify }}",
+    "_copy_without_render": [
+      "static/templates",
+      "dags/*",
+      "notebooks"
+    ],
+    "country": "hti",
+    "report_type": "active_crisis",
+    "crisis_name": "test crisis",
+    "start_date": "2021-01-01",
+    "end_date": "2022-01-01",
+    "affected_area_path": ".circleci/dummy_geojson.json",
+    "__project_slug": "hti-test-crisis-2021-01-01",
+    "_template": ".",
+    "_output_dir": "/tmp/cookiegen",
+    "_repo_dir": ".",
+    "_checkout": null,
+    "_extensions": [
+      "local_extensions.to_iso"
+    ]
+  },
+  "_cookiecutter": {
+    "country": "hti",
+    "report_type": "active_crisis",
+    "crisis_name": "test crisis",
+    "start_date": "2021-01-01",
+    "end_date": "2022-01-01",
+    "affected_area_path": ".circleci/dummy_geojson.json"
+  }
+}

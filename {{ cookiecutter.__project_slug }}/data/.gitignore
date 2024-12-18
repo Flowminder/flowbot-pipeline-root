@@ -1,0 +1,8 @@
+*
+!.gitignore
+!/dagruns
+/dagruns/*
+!/dagruns/.gitkeep
+!/shared
+/shared/*
+!/shared/.gitkeep

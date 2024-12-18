@@ -1,0 +1,10 @@
+executed_notebooks/*
+data/*
+key_obs/*
+original_spec.json
+dags/make_symlinks.py
+README.md
+static/affected_areas.json
+Makefile
+rsync_exclude.txt
+.git

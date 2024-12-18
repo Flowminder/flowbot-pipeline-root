@@ -1,0 +1,44 @@
+{
+  "_extensions": [
+    "local_extensions.to_iso",
+    "local_extensions.region_query",
+    "local_extensions.pop_estimates_file",
+    "local_extensions.flow_weights_file",
+    "local_extensions.full_name",
+    "local_extensions.notebook_uid",
+    "local_extensions.notebook_gid",
+    "local_extensions.internal_network"
+  ],
+  "_crisis_slug": "{{ cookiecutter.crisis_name|slugify }}",
+  "_copy_without_render": ["static/templates", "dags/*", "notebooks"],
+  "country": [
+    "Haiti",
+    "Ghana",
+    "Congo, The Democratic Republic of the",
+    "Nepal"
+  ],
+  "report_type": ["active_crisis", "preparedness", "dashboard_indicators"],
+  "crisis_name": "test prep ",
+  "start_date": "2016-01-01",
+  "end_date": "2016-12-31",
+  "affected_area_path": "/path/to/affected/area",
+  "residents_reference_date": "2016-01-01",
+  "relocations_reference_date": "2016-02-01",
+  "__country_iso": "{{ cookiecutter.country|to_iso|lower }}",
+  "__full_country_name": "{{ cookiecutter.country|to_iso|lower|full_name }}",
+  "__project_slug": "{{ cookiecutter.country|to_iso|lower }}-{{ cookiecutter.crisis_name|slugify }}-{{ cookiecutter.start_date }}",
+  "__prompts__": {
+    "report_type": {
+      "__prompt__": "The type of report this pipeline will generate",
+      "active_crisis": "An ongoing or predicted crisis",
+      "preparedness": "Six-monthly preparedness report",
+      "dashboard_indicators": "incdicators for upload to a dashboard."
+    },
+    "crisis_name": "The name of the crisis; 'zmpp gang violence', 'north coast earthquake', and similar.",
+    "start_date": "The date (yyyy-mm-dd) to begin running pipeline. Will be backfilled if in the past.",
+    "end_date": "The date (yyyy-mm-dd) to stop running the pipeline.",
+    "affected_area_path": "Path to a geojson of the affected areas. Ignored for preparedness and dashboard indicators.",
+    "residents_reference_date": "The month (yyyy-mm-dd) to use for a preparedness baseline. Ignored in other reports.",
+    "relocations_reference_date": "The month (yyyy-mm-dd) to ues for a relocations baseline. Ingored in other reports."
+  }
+}
