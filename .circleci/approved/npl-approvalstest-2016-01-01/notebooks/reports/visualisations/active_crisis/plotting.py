@@ -5,6 +5,7 @@ import pandas as pd
 from pandas import DataFrame
 import numpy as np
 from slugify import slugify
+from cycler import cycler
 
 px = 1 / plt.rcParams["figure.dpi"]
 
@@ -106,6 +107,9 @@ def top_3_adm_hosts(
     aa_name: str,
     output_folder: Path,
 ):
+    color_cycle_iter = cycler(
+        color=["#034174", "#CBA45A", "#701F53", "#006E8C", "#BF6799", "#00989A", "#9E6257"]
+    )()
     def _plot_arrivals(df, ax):
         df = df.set_index("date")
 
@@ -206,6 +210,9 @@ def top_3_adm_hosts_multi_aa(
     aa_name: list[str],
     output_folder: Path,
 ):
+    color_cycle_iter = cycler(
+        color=["#034174", "#CBA45A", "#701F53", "#006E8C", "#BF6799", "#00989A", "#9E6257"]
+    )()
     def _plot_arrivals(df, ax):
         df = df.groupby("date").sum()
 
