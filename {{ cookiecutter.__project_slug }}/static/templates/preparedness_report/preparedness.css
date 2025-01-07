@@ -1,0 +1,162 @@
+/* Got from
+https://fonts.google.com/share?selection.family=Frank+Ruhl+Libre:wght@300:500|Roboto:wght@300;400
+*/
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;500&family=Roboto:wght@300;400&display=swap");
+@page {
+  size: A4 landscape;
+  margin: -10px;
+}
+
+div[class="Aboutbox"] {
+  border-top-right-radius: 30px 15px;
+}
+
+div[class="Titlebox"] {
+  border-top-right-radius: 20px 20px;
+  border-bottom-right-radius: 20px 20px;
+}
+
+div[class="Periodbox"] {
+  border-bottom-left-radius: 20px 20px;
+  border-bottom-right-radius: 20px 20px;
+}
+
+div[class="Aboutboilerplatebox"] {
+  border-top-right-radius: 100px 80px;
+}
+
+div[class*="AboutThisWork"] {
+  line-height: 14px;
+  font-size: 6;
+  word-wrap: break-word;
+}
+div[class="DisclaimerBox"] {
+  color: white;
+  font-size: 10px;
+  font-family: Roboto;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+div[class="Disclaimertext"] {
+  color: white;
+  font-size: 10px;
+  font-family: Roboto;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+div[class*="ThisReportAndItsContents"] {
+  line-height: normal;
+  font-size: small;
+}
+
+
+table {
+  border-collapse: collapse;
+  border: 1px solid;
+  border-color: #e0e0e0;
+}
+
+td {
+  border: 1px solid #333;
+  border-collapse: collapse;
+  border-color: #e0e0e0;
+  color: black;
+  font-size: 7px;
+  font-weight: 300;
+  word-wrap: break-word;
+  font-family: Roboto;
+  text-align: center;
+  padding: 2px;
+}
+
+td:nth-child(1) {
+  text-align: left;
+}
+
+th {
+  background-color: #095798;
+  color: white;
+  font-family: Frank Ruhl Libre;
+  font-weight: 500;
+  font-size: 7pt;
+  border: 1px solid;
+  border-color: #e0e0e0;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: left;
+}
+
+div[class="BoilerplateBox"] {
+  color: white;
+  font-size: 10.5px;
+  font-family: Roboto;
+  font-weight: 300;
+  line-height: 14px;
+  word-wrap: break-word;
+}
+
+div[class="DataPrivacyBox"] {
+  color: black;
+  font-size: 10.5px;
+  font-family: Roboto;
+  font-weight: 300;
+  line-height: 14px;
+  word-wrap: break-word;
+}
+
+div[class="BigDisclaimerBox"] {
+  color: black;
+  font-size: 8px;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 12px;
+  word-wrap: break-word;
+}
+
+div[class="Verticalupdatenum"] {
+  background: #054274;
+  text-align: center;
+  /* Not a fan of this hack, but it works until we change the size of the box*/
+  line-height: 2;
+}
+
+div[class="Banner"] {
+  border-bottom-left-radius: 15px 15px;
+  border-bottom-right-radius: 15px 15px;
+}
+
+/* Hack for heading formatting */
+div[class="Docbox"].strong {
+  color: #cba45a;
+  font-size: 10.5px;
+  font-family: Frank Ruhl Libre;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+div[class="Docbox"].em {
+  color: #095798;
+  font-family: Frank Ruhl Libre;
+  font-weight: medium;
+}
+
+div[class="Docboxwhite"] > strong {
+  color: #2d2d2d;
+  font-size: 11px;
+  font-family: Frank Ruhl Libre;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+div[class="Docboxwhite"] > ul {
+  margin_top: 0px;
+}
+
+a {
+  color: #27b288;
+  font-size: 10.5px;
+  font-family: Roboto;
+  font-weight: 300;
+  text-decoration: underline;
+}
