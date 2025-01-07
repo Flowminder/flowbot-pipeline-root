@@ -1,2 +1,6 @@
 *
 !.gitignore
+!templates
+!templates/**
+!data
+!data/**
