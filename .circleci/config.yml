@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Render template
           command: |
-            mkdir .circleci/generated
+            mkdir .circleci/generated || true
             bash run.sh . -o .circleci/generated --replay-file .circleci/test-replay.json
       - run:
           name: Compare to example
