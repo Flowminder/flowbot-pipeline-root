@@ -35,7 +35,6 @@ class PreparednessConfig:
             "swiss_sponsor_crop.jpeg",
             "hewlett.png",
             "afd.png",
-            "usaid.png",
             "digicel_red.jpeg",
         ]
     )
